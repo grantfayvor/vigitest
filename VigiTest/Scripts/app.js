@@ -41,7 +41,7 @@ app.controller('InvoiceController', ['$scope', '$http', function ($scope, $http)
             "InvoiceNumber": "sample string 9",
             "InvoiceAction": 1
         };
-        $http.post('https://api.vigipay.gov/api/invoice/create', invoiceDetails)
+        $http.post('https://gateway.vigipay.co/api/invoice/create', invoiceDetails)
             .then(function (response) {
                 document.writeln(response.data);
             }, function (response) {
